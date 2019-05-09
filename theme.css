@@ -1,0 +1,48 @@
+#name {
+	color: #801500;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.section {
+	color: #801500;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.cont {
+	margin-left: 5%;
+	border-style: groove;
+	border-width: 0px 0px thin 0px;
+	display: flex;
+}
+
+li {
+	margin-left: 3%;
+}
+
+li .projectname {
+	color: #801500;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.flex-container {
+	margin-left: 5%;
+	margin-bottom: 10px;
+}
+
+a {
+	color: red;
+}
+
+.period {
+	font-style: italic;
+	font-size: 15px;
+	margin-left: 2%;
+	color: #7E7685;
+}
+
+.description {
+	margin-left: 2%;
+}
