@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Selector stil</title>
+		<meta charset="utf-8">
+		
+	</head>
+	<body>
+		<div id="changing-font">Acest text isi va schimba stilul.</div>
+
+		<form>
+		  Size:<br>
+		  <input type="number" id="size" name="size" value="10"><br>
+		  Color:<br>
+		  <input type="text" id="color" name="color" value="red"><br>
+		  Boldness:<br>
+		  <input type="number" id="fontWeight" name="fontWeight" value="400"><br>
+		  <input type="button" value="Submit" onclick="modify()">
+		</form> 
+		
+		<script>
+			function switchSize() {
+				document.getElementById("changing-font").style.fontSize = document.getElementById("size").value;
+			}
+
+			function switchColor() {
+				document.getElementById("changing-font").style.color = document.getElementById("color").value;
+			}
+
+			function switchBold() {
+				document.getElementById("changing-font").style.fontWeight = document.getElementById("fontWeight").value;
+			}
+
+			function modify() {
+				switchSize();
+				swithchColor();
+				switchBold();
+			}
+		</script>
+
+	</body>
+</html>
