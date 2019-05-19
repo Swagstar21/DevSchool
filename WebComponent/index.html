@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Components</title>
+    <meta charset="utf-8">
+    <script>
+      class MyCustomElement extends HTMLElement {
+        constructor() {
+          super();
+          console.log('My custom element constructor');
+        }
+
+        connectedCallback() {
+          console.log('Custom element added to DOM');
+          // this.innerHTML = '<p>My custom element</p>';
+          this.innerHTML = `
+            <style>
+            p {
+              color:red;
+            }
+            </style>
+            <p>My custom element</p>`;
+        }
+
+        disconnectedCallback() {
+          console.log('My custom element removed from DOM');
+        }
+      }
+
+      window.customElements.define('my-custom-element', MyCustomElement);
+    </script>
+    <style>
+    p {
+      color: darkblue;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- <my-custom-element></my-custom-element> -->
+    <script>
+      const element = document.createElement('my-custom-element');
+      setTimeout(() => {
+        document.body.appendChild(element);
+      }, 3000);
+      
+      setTimeout(() => {
+        document.body.removeChild(element);
+      }, 6000);
+    </script>
+  </body>
+</html>
